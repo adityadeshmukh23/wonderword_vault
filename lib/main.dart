@@ -52,7 +52,7 @@ class MyAppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  // Add the following method to fix the error
+  
   void getNext() {
     current = WordPair.random();
     notifyListeners();
@@ -318,9 +318,9 @@ class GeneratorPage extends StatelessWidget {
             ],
           ),
           SizedBox(height: 20),
-          // Add the engineering icon here
+          
           Icon(
-            Icons.engineering, // You can replace this with the actual engineering icon
+            Icons.engineering, 
             size: 150,
             color: Colors.black,
           ),
@@ -359,12 +359,12 @@ class FavoritesPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20), // Add some space between the list and the button
+          SizedBox(height: 20), 
           ElevatedButton(
             onPressed: () {
-              // Call the function to delete all liked words
+              
               context.read<MyAppState>().favorites.clear();
-              // Notify listeners to update the UI
+              
               context.read<MyAppState>().notifyListeners();
             },
             child: Text('Delete All'),
